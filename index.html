@@ -197,21 +197,6 @@
   }
   #mystic-audit .hero-sky canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.8; }
   #mystic-audit .hero-inner { position: relative; z-index: 1; }
-  #mystic-audit .hero-meta {
-    font-size: 0.82rem;
-    color: var(--ink-faint);
-    letter-spacing: 0.02em;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  #mystic-audit .hero-meta .dot {
-    width: 5px; height: 5px; border-radius: 50%;
-    background: var(--flag);
-    box-shadow: 0 0 8px 1px var(--flag-dim);
-    flex-shrink: 0;
-  }
   #mystic-audit .hero h1 {
     font-size: clamp(2.1rem, 3.4vw + 1.1rem, 4.35rem);
     letter-spacing: -0.015em;
@@ -243,11 +228,6 @@
     font-weight: 600;
     font-size: 1rem;
     color: var(--ink);
-  }
-  #mystic-audit .hero-target .status {
-    font-size: 0.78rem;
-    color: var(--flag-glow);
-    font-weight: 500;
   }
   #mystic-audit .scroll-hint {
     position: absolute;
@@ -584,12 +564,10 @@
   <section class="hero">
     <div class="hero-sky"><canvas id="starfield"></canvas></div>
     <div class="shell hero-inner">
-      <div class="hero-meta"><span class="dot"></span> BAĞIMSIZ DENETİM &nbsp;·&nbsp; 17 AĞUSTOS 2026 &nbsp;·&nbsp; MYSTIC</div>
       <h1>On dokuz yıllık bir işletme, hala <em>kutudan çıktığı</em> haliyle duruyor.</h1>
       <p class="hero-sub">adetasyapi.com'u altı sayfa boyunca, mobil görünümüyle, arka planda çalışan teknolojisiyle ve yayınladığı her iddiayla birlikte inceledik. Aşağıda bulduklarımız var — yorum değil, canlı siteden.</p>
       <div class="hero-target">
         <span class="url">adetasyapi.com</span>
-        <span class="status">— canlı, incelendi</span>
       </div>
     </div>
     <div class="scroll-hint"><span class="line"></span> Aşağı kaydır</div>
