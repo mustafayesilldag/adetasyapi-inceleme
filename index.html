@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Adetaş Denetimi — MYSTIC</title>
+<title>Adetaş Denetimi · MYSTIC</title>
 <meta name="description" content="adetasyapi.com için MYSTIC'in hazırladığı bağımsız tasarım ve sistem denetimi.">
-<meta property="og:title" content="Adetaş Denetimi — MYSTIC">
+<meta property="og:title" content="Adetaş Denetimi · MYSTIC">
 <meta property="og:description" content="adetasyapi.com için MYSTIC'in hazırladığı bağımsız tasarım ve sistem denetimi.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#030509">
@@ -197,6 +197,21 @@
   }
   #mystic-audit .hero-sky canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.8; }
   #mystic-audit .hero-inner { position: relative; z-index: 1; }
+  #mystic-audit .hero-meta {
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #mystic-audit .hero-meta .dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--flag);
+    box-shadow: 0 0 8px 1px var(--flag-dim);
+    flex-shrink: 0;
+  }
   #mystic-audit .hero h1 {
     font-size: clamp(2.1rem, 3.4vw + 1.1rem, 4.35rem);
     letter-spacing: -0.015em;
@@ -229,16 +244,10 @@
     font-size: 1rem;
     color: var(--ink);
   }
-  #mystic-audit .scroll-hint {
-    position: absolute;
-    bottom: 40px; left: clamp(20px, 5vw, 48px);
+  #mystic-audit .hero-target .status {
     font-size: 0.78rem;
-    color: var(--ink-faint);
-    display: flex; align-items: center; gap: 10px;
-    z-index: 1;
-  }
-  #mystic-audit .scroll-hint .line {
-    width: 28px; height: 1px; background: var(--ink-faint);
+    color: var(--flag-glow);
+    font-weight: 500;
   }
 
   /* ================= SECTION HEADERS ================= */
@@ -564,13 +573,14 @@
   <section class="hero">
     <div class="hero-sky"><canvas id="starfield"></canvas></div>
     <div class="shell hero-inner">
+      <div class="hero-meta"><span class="dot"></span> BAĞIMSIZ DENETİM &nbsp;·&nbsp; 17 AĞUSTOS 2026 &nbsp;·&nbsp; MYSTIC</div>
       <h1>On dokuz yıllık bir işletme, hala <em>kutudan çıktığı</em> haliyle duruyor.</h1>
-      <p class="hero-sub">adetasyapi.com'u altı sayfa boyunca, mobil görünümüyle, arka planda çalışan teknolojisiyle ve yayınladığı her iddiayla birlikte inceledik. Aşağıda bulduklarımız var — yorum değil, canlı siteden.</p>
+      <p class="hero-sub">adetasyapi.com'u altı sayfa boyunca, mobil görünümüyle, arka planda çalışan teknolojisiyle ve yayınladığı her iddiayla birlikte inceledik. Aşağıda bulduklarımız var: yorum değil, canlı siteden.</p>
       <div class="hero-target">
         <span class="url">adetasyapi.com</span>
+        <span class="status">canlı, incelendi</span>
       </div>
     </div>
-    <div class="scroll-hint"><span class="line"></span> Aşağı kaydır</div>
   </section>
 
   <!-- ================= METHOD ================= -->
@@ -581,10 +591,10 @@
         <p class="lede">Ekran görüntüsüne bakıp yorum yapmadık. Siteyi bir ziyaretçi gibi gezdik, arka planda ne çalıştığını okuduk.</p>
       </div>
       <div class="method-grid">
-        <div class="method-item"><div class="k">6</div><div class="v">sayfa tek tek incelendi — anasayfa, mağaza, ürün, hakkımızda, iletişim, banka bilgileri</div></div>
-        <div class="method-item"><div class="k">2</div><div class="v">görünüm test edildi — masaüstü ve mobil (375px)</div></div>
-        <div class="method-item"><div class="k">1</div><div class="v">alt yapı tespit edildi — tema, eklentiler, konsol hataları, ağ istekleri</div></div>
-        <div class="method-item"><div class="k">8</div><div class="v">kategoride, 5 üzerinden puanlandı — aşağıda satır satır</div></div>
+        <div class="method-item"><div class="k">6</div><div class="v">sayfa tek tek incelendi: anasayfa, mağaza, ürün, hakkımızda, iletişim, banka bilgileri</div></div>
+        <div class="method-item"><div class="k">2</div><div class="v">görünüm test edildi: masaüstü ve mobil (375px)</div></div>
+        <div class="method-item"><div class="k">1</div><div class="v">alt yapı tespit edildi: tema, eklentiler, konsol hataları, ağ istekleri</div></div>
+        <div class="method-item"><div class="k">8</div><div class="v">kategoride, 5 üzerinden puanlandı. Aşağıda satır satır</div></div>
       </div>
     </div>
   </section>
@@ -601,7 +611,7 @@
         <div class="finding-num">01</div>
         <div class="finding-body">
           <h3>Görsel Kimlik &amp; Marka</h3>
-          <p>Sıfır özelleştirme yapılmış bir <code>Flatsome/WooCommerce</code> teması. Yazı tipleri ve bileşenler tema varsayılanı — "19 yıllık uzmanlık" iddiasını taşıyacak hiçbir görsel imza yok.</p>
+          <p>Sıfır özelleştirme yapılmış bir <code>Flatsome/WooCommerce</code> teması. Yazı tipleri ve bileşenler tema varsayılanı. "19 yıllık uzmanlık" iddiasını taşıyacak hiçbir görsel imza yok.</p>
         </div>
         <div class="score"><div class="ticks"></div><div class="val">1 / 5</div></div>
       </div>
@@ -628,7 +638,7 @@
         <div class="finding-num">04</div>
         <div class="finding-body">
           <h3>İçerik Kalitesi</h3>
-          <p>Ana Sayfa, Hakkımızda, İletişim ve Banka Bilgileri — her biri neredeyse aynı kalıpta, 800-1200 kelimelik anahtar-kelime metniyle açılıyor. En az bir gramer hatası da geçiyor.</p>
+          <p>Ana Sayfa, Hakkımızda, İletişim ve Banka Bilgileri, her biri neredeyse aynı kalıpta, 800-1200 kelimelik anahtar-kelime metniyle açılıyor. En az bir gramer hatası da geçiyor.</p>
         </div>
         <div class="score"><div class="ticks"></div><div class="val">1 / 5</div></div>
       </div>
@@ -637,7 +647,7 @@
         <div class="finding-num">05</div>
         <div class="finding-body">
           <h3>E-ticaret Deneyimi</h3>
-          <p>Sepete ekleme çalışıyor, ama ürün başına tek ve düşük çözünürlüklü fotoğraf var — bazıları doğrudan telefondan yüklenmiş görünüyor. Stoksuz ürünlerde fiyat <code>0,00₺</code> gösteriliyor; ürün sayfasında sahte bir geri sayım sayacı var.</p>
+          <p>Sepete ekleme çalışıyor, ama ürün başına tek ve düşük çözünürlüklü fotoğraf var. Bazıları doğrudan telefondan yüklenmiş görünüyor. Stoksuz ürünlerde fiyat <code>0,00₺</code> gösteriliyor; ürün sayfasında sahte bir geri sayım sayacı var.</p>
         </div>
         <div class="score"><div class="ticks"></div><div class="val">2 / 5</div></div>
       </div>
@@ -646,7 +656,7 @@
         <div class="finding-num">06</div>
         <div class="finding-body">
           <h3>Güven &amp; Dönüşüm</h3>
-          <p>Her üründe <code>Değerlendirmeler (0)</code> yazıyor — 19 yıllık iddiaya rağmen tek bir müşteri yorumu toplanmamış. Tamamlanan projelerden tek bir görsel bile yok.</p>
+          <p>Her üründe <code>Değerlendirmeler (0)</code> yazıyor. 19 yıllık iddiaya rağmen tek bir müşteri yorumu toplanmamış. Tamamlanan projelerden tek bir görsel bile yok.</p>
         </div>
         <div class="score"><div class="ticks"></div><div class="val">1 / 5</div></div>
       </div>
@@ -664,7 +674,7 @@
         <div class="finding-num">08</div>
         <div class="finding-body">
           <h3>Teknik Kalite</h3>
-          <p>Sayfa yüklenirken konsolda hata veriyor. Şirketin tam IBAN'ı herkese açık, indexlenebilir bir sayfada yayında — üstelik site aynı sayfada "sahte IBAN'a dikkat edin" diye uyarıyor.</p>
+          <p>Sayfa yüklenirken konsolda hata veriyor. Şirketin tam IBAN'ı herkese açık, indexlenebilir bir sayfada yayında. Üstelik site aynı sayfada "sahte IBAN'a dikkat edin" diye uyarıyor.</p>
         </div>
         <div class="score"><div class="ticks"></div><div class="val">1.5 / 5</div></div>
       </div>
@@ -678,7 +688,7 @@
       <div class="label">TOPLAM PUAN</div>
       <div class="score-big"><span class="num">10</span><span class="den"> / 40</span></div>
       <div class="verdict-bar"><span></span></div>
-      <p class="note">Sekiz kategori, beş üzerinden. Aynı bütçeyle çok daha fazlası mümkün — aşağıda üç örnek var.</p>
+      <p class="note">Sekiz kategori, beş üzerinden. Aynı bütçeyle çok daha fazlası mümkün. Aşağıda üç örnek var.</p>
     </div>
   </section>
 
@@ -710,13 +720,13 @@
           <div class="proof-text">
             <div class="proof-eyebrow">Canlı sistem</div>
             <h3>TrackDesk</h3>
-            <p>Sahada çalışan satış ekipleri için kurduğumuz gerçek zamanlı tahsilat paneli. Sipariş, teslimat ve tahsilatı tek ekranda topluyor — şu an gerçek bir işletmede kullanılıyor.</p>
+            <p>Sahada çalışan satış ekipleri için kurduğumuz gerçek zamanlı tahsilat paneli. Sipariş, teslimat ve tahsilatı tek ekranda topluyor. Şu an gerçek bir işletmede kullanılıyor.</p>
             <a class="proof-link" href="https://mustafayesilldag.github.io/TrackDesk/tanitim.html" target="_blank" rel="noopener">Demoyu gör ↗</a>
           </div>
           <div class="proof-stats">
             <div class="stat"><b class="tag-num">4M₺+</b><span>takip edilen kazanç</span></div>
             <div class="stat"><b class="tag-num">1000+</b><span>işlem</span></div>
-            <div class="stat"><b class="tag-num">3</b><span>cihaz — telefon, tablet, masaüstü</span></div>
+            <div class="stat"><b class="tag-num">3</b><span>cihaz: telefon, tablet, masaüstü</span></div>
             <div class="stat"><b class="tag-num">Canlı</b><span>gerçek zamanlı senkron</span></div>
           </div>
         </div>
@@ -725,7 +735,7 @@
           <div class="proof-text">
             <div class="proof-eyebrow">Şu an okuduğun sayfa</div>
             <h3>Bu denetim de şablon değil</h3>
-            <p>Bu sayfa dahil kurduğumuz her şey sıfırdan, elle inşa edilir — hazır tema, kalıp bileşen ya da yapay zeka metin doldurma yok. Daha fazla iş için portfolyomuza bakabilirsin.</p>
+            <p>Bu sayfa dahil kurduğumuz her şey sıfırdan, elle inşa edilir: hazır tema, kalıp bileşen ya da yapay zeka metin doldurma yok. Daha fazla iş için portfolyomuza bakabilirsin.</p>
             <a class="proof-link" href="https://mustafayesilldag.github.io/mystic.github.io/" target="_blank" rel="noopener">Portfolyoyu gör ↗</a>
           </div>
         </div>
@@ -737,7 +747,7 @@
   <section class="cta" data-reveal>
     <div class="shell">
       <h2>Bunu birlikte konuşalım.</h2>
-      <p class="lede">Fiyat teklifinden önce, adetasyapi.com'un gerçekte neye ihtiyacı olduğunu netleştirelim — 20 dakikalık kısa bir görüşme yeterli.</p>
+      <p class="lede">Fiyat teklifinden önce, adetasyapi.com'un gerçekte neye ihtiyacı olduğunu netleştirelim. 20 dakikalık kısa bir görüşme yeterli.</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="https://wa.me/905367701150" target="_blank" rel="noopener">WhatsApp'tan yaz</a>
         <a class="btn btn-ghost" href="mailto:mustafayesilldag@gmail.com">mustafayesilldag@gmail.com</a>
@@ -748,7 +758,7 @@
 
   <footer>
     <div class="shell">
-      <div><strong>MYSTIC</strong> — Mustafa Yeşildağ</div>
+      <div><strong>MYSTIC</strong> · Mustafa Yeşildağ</div>
       <div>Bu denetim 17 Ağustos 2026'da, adetasyapi.com'un o an yayında olan haliyle hazırlanmıştır. Bağımsız görüş içerir.</div>
     </div>
   </footer>
@@ -833,7 +843,7 @@
     canvas.remove();
   }
 
-  // scroll lighting — ambient turquoise glow that travels with the reader
+  // scroll lighting: ambient turquoise glow that travels with the reader
   var glowBlobs = root.querySelectorAll('.scroll-glow .blob');
   if (glowBlobs.length && !reduced) {
     var ticking = false;
